@@ -1,0 +1,108 @@
+
+  <div class="chart-container">
+    <div class="chart-card-container" id="leftChartCardContainer">
+      <div class="card" id="leftChartCard">
+        <div class="card" id="sentimentChartCard">
+          <h2 class="gauge-heading text-center">All Data</h2>
+          <canvas id="sentimentChart" class="chart-canvas" width="800" height="500"></canvas>
+        </div>
+      </div>
+
+      <!-- New div for space -->
+      <div class="chart-space"></div>
+
+      <!-- Social Media Gauge Card Container -->
+      <div class="card" id="gaugeChartCard">
+        <h2 class="gauge-heading">Social Media Gauge</h2>
+        <div id="gaugeChart" class="gauge-chart"></div>
+      </div>
+    </div>
+
+    <div class="chart-card-container" id="rightChartCardContainer">
+      <div class="square-card">
+        <div class="gauge-item card" id="allNewsGaugeChartContainer">
+          <h2 class="gauge-heading">News</h2>
+          <div id="allNewsGaugeChart" class="gauge-chart"></div>
+        </div>
+
+        <div class="gauge-item card" id="bitcoinGaugeChartContainer">
+          <h2 class="gauge-heading">Bitcoin</h2>
+          <div id="bitcoinGaugeChart" class="gauge-chart"></div>
+        </div>
+      </div>
+
+      <div class="square-card">
+        <div class="gauge-item card" id="altcoinGaugeChartContainer">
+          <h2 class="gauge-heading">Altcoin</h2>
+          <div id="altcoinGaugeChart" class="gauge-chart"></div>
+        </div>
+
+        <div class="gauge-item card" id="ethereumGaugeChartContainer">
+          <h2 class="gauge-heading">Ethereum</h2>
+          <div id="ethereumGaugeChart" class="gauge-chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Bar chart
+    var ctx = document.getElementById('sentimentChart').getContext('2d');
+    var chartData = JSON.parse('{{{ chartData }}}');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: chartData,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+          },
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+          title: {
+            display: false,
+          },
+          tooltips: {
+            enabled: false,
+          },
+        },
+        barThickness: 60,
+      },
+    });
+
+    // Gauge charts
+    var gaugeCharts = {
+      gaugeChart: {{ averageSentiment }},
+      allNewsGaugeChart: {{ averageAllNewsSentiment }},
+      altcoinGaugeChart: {{ averageAltcoinSentiment }},
+      ethereumGaugeChart: {{ averageEthereumSentiment }},
+      bitcoinGaugeChart: {{ averageBitcoinSentiment }},
+    };
+
+    // Gauge options
+    var gaugeOptions = {
+      min: 0,
+      max: 100,
+      label: 'Percentage',
+      gaugeWidthScale: 0.6,
+      counter: true,
+      relativeGaugeSize: true,
+      valueFontColor: '#000',
+      levelColors: ['#FF5733', '#33FF55', '#3399FF'],
+    };
+
+    // Initialize gauge charts
+    Object.keys(gaugeCharts).forEach(function (chartId) {
+      new JustGage({
+        id: chartId,
+        value: gaugeCharts[chartId],
+        ...gaugeOptions,
+      });
+    });
+  });
+</script>

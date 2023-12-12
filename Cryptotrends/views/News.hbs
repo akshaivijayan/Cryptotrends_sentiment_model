@@ -1,0 +1,27 @@
+<!-- Your HTML structure for the news gauge -->
+<div class="chart-container">
+  <div class="card" id="newsGaugeCard">
+    <h2 class="gauge-heading">News Sentiment</h2>
+    <div id="newsGaugeChart" class="gauge-chart"></div>
+  </div>
+</div>
+
+<!-- Your JavaScript code for the news gauge -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Gauge chart for News Sentiment
+    var newsGauge = new JustGage({
+      id: 'newsGaugeChart',
+      value: {{ averageAllNewsSentiment }},  <!-- Use the specific value you need -->
+      min: 0,
+      max: 100,
+      title: 'Average Sentiment (News)',
+      label: 'Percentage',
+      gaugeWidthScale: 0.6,
+      counter: true,
+      relativeGaugeSize: true,
+      valueFontColor: '#fff',
+      levelColors: ['#FF5733', '#33FF55', '#3399FF'],
+    });
+  });
+</script>
