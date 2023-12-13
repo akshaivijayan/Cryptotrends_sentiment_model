@@ -25,6 +25,7 @@ Explain what your project does and its main components involving both Python and
 Clone the repository to your local machine:
 
 git clone https://github.com/akshaivijayan/Cryptotrends_sentiment_model
+
 cd Cryptotrends_sentiment_model/cryptotrends
 
 ## Installation
