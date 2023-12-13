@@ -1,35 +1,52 @@
-# Sentiment Analysis Model
+# Project Name
 
-This project implements a sentiment analysis model using natural language processing techniques to determine the sentiment (positive, negative, or neutral) of a given text.
+A brief description of your project.
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Features](#features)
-- [Demo](#demo)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
-Sentiment analysis is the process of determining the sentiment expressed in a piece of text. This model uses machine learning techniques to predict whether the sentiment is positive, negative, or neutral.
+Explain what your project does and its main components involving both Python and Node.js.
 
-## Features
+## Prerequisites
 
-- Pre-trained sentiment analysis model.
-- Support for text input through the command line or API.
-- Accuracy metrics and evaluation.
+- Python 3.11 or less
+- Node.js
+- npm
 
-## Demo
+## Getting Started
 
-[Link to Demo](https://example.com/sentiment-demo)
+Clone the repository to your local machine:
 
-Include a link to a live demo or a video showcasing your sentiment analysis model in action.
+```bash
+git clone https://github.com/akshaivijayan/Cryptotrends_sentiment_model
+cd Cryptotrends_sentiment_model
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/sentiment-analysis.git
-   cd sentiment-analysis
+1) Create a Python virtual environment: 
+python -m venv venv
+
+2)Activate the virtual environment:
+.\venv\Scripts\activate.bat
+
+3)Install Python dependencies:
+pip install -r requirements.txt
+
+4)Install Node.js dependencies:
+npm install
+
+## Usage
+1) Create a database in postgresql(pgadmin) with following credentials
+DATABASE_URL = "postgresql://postgres:teranaam@localhost/fastapi"
+
+2) Run the backend:
+npm run start-backend
+
+3) Run the frontend:
+npm run start-frontend
