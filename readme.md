@@ -28,7 +28,7 @@ Clone the repository to your local machine:
 
 git clone https://github.com/akshaivijayan/Cryptotrends_sentiment_model
 
-cd Cryptotrends_sentiment_model/cryptotrends
+cd Cryptotrends_sentiment_model
 
 ## Installation
 
@@ -49,10 +49,13 @@ npm install
 1) Create a database in postgresql(pgadmin) with following credentials
 DATABASE_URL = "postgresql://postgres:teranaam@localhost/fastapi"
 
-2) Run the backend:
+2)Move to the specific directory
+cd cryptotrends
+
+3) Run the backend:
 npm run start-backend
 go to : http://localhost:8000 #to scrape the data to table
 
-3) Run the frontend:
+4) Run the frontend:
 npm run start-frontend
 go to : http://localhost:3000 #to view the dashboard
