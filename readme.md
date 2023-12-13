@@ -53,4 +53,4 @@ go to : http://localhost:8000 #to scrape the data to table
 
 3) Run the frontend:
 npm run start-frontend
-go to : http://localhost:8000 #to view the dashboard
+go to : http://localhost:3000 #to view the dashboard
