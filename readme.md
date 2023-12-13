@@ -1,6 +1,7 @@
-# Project Name
+# Crypto Sentimental Analysis
 
-A brief description of your project.
+A project to provide insights into market sentiment trends and help users stay informed about the mood surrounding specific cryptocurrencies
+
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -11,7 +12,8 @@ A brief description of your project.
 
 ## Introduction
 
-Explain what your project does and its main components involving both Python and Node.js.
+The Cryptotrends Sentiment Model is an innovative project that merges Python and Node.js technologies to provide a comprehensive solution for analyzing and visualizing cryptocurrency trends. This tool empowers users with real-time sentiment analysis, enabling them to gain valuable insights into the volatile world of cryptocurrencies. Leveraging a PostgreSQL database and intuitive dashboards, it seamlessly scrapes and displays data, enhancing the user's ability to make informed decisions. The project's robust architecture, combined with a user-friendly interface, makes it a valuable resource for cryptocurrency enthusiasts, traders, and researchers seeking to navigate and understand the dynamic landscape of digital assets.
+
 
 ## Prerequisites
 
