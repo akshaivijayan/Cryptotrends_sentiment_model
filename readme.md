@@ -18,12 +18,13 @@ Explain what your project does and its main components involving both Python and
 - Python 3.11 or less
 - Node.js
 - npm
+- postgreSQL with pgadmin
 
 ## Getting Started
 
 Clone the repository to your local machine:
 
-```bash
+---- bash command----
 git clone https://github.com/akshaivijayan/Cryptotrends_sentiment_model
 cd Cryptotrends_sentiment_model
 
@@ -42,11 +43,14 @@ pip install -r requirements.txt
 npm install
 
 ## Usage
+
 1) Create a database in postgresql(pgadmin) with following credentials
 DATABASE_URL = "postgresql://postgres:teranaam@localhost/fastapi"
 
 2) Run the backend:
 npm run start-backend
+go to : http://localhost:8000 #to scrape the data to table
 
 3) Run the frontend:
 npm run start-frontend
+go to : http://localhost:8000 #to view the dashboard
