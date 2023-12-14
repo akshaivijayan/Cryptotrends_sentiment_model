@@ -45,7 +45,7 @@ pip install -r requirements.txt
 4) Download Extra modules needed
 
 - python -m nltk.downloader punkt stopwords wordnet
-- python -m spacy download en_core_web_lg==3.1.0
+- python -m spacy download en_core_web_lg
 
 4) Install Node.js dependencies:
 npm install
