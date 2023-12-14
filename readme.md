@@ -17,10 +17,11 @@ The Cryptotrends Sentiment Model is an innovative project that merges Python and
 
 ## Prerequisites
 
-- Python 3.11 or less
+- Python 3.11 
 - Node.js
 - npm
 - postgreSQL with pgadmin
+- git
 
 ## Getting Started
 
@@ -35,13 +36,18 @@ cd Cryptotrends_sentiment_model
 1) Create a Python virtual environment: 
 python -m venv venv
 
-2)Activate the virtual environment:
+2) Activate the virtual environment:
 .\venv\Scripts\activate.bat
 
-3)Install Python dependencies:
+3) Install Python dependencies:
 pip install -r requirements.txt
 
-4)Install Node.js dependencies:
+4) Download Extra modules needed
+
+- python -m nltk.downloader punkt stopwords wordnet
+- python -m spacy download en_core_web_lg==3.1.0
+
+4) Install Node.js dependencies:
 npm install
 
 ## Usage
@@ -49,7 +55,7 @@ npm install
 1) Create a database in postgresql(pgadmin) with following credentials
 DATABASE_URL = "postgresql://postgres:teranaam@localhost/fastapi"
 
-2)Move to the specific directory
+2) Move to the specific directory
 cd cryptotrends
 
 3) Run the backend:
